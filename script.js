@@ -57,4 +57,13 @@ function initProjectCards() {
       alert("Opening project...");
     });
   });
+
+  const shareButtons = document.querySelectorAll(
+    ".project-actions .icon-btn:last-child",
+  );
+  shareButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      alert("Share the project soon!");
+    });
+  });
 }
