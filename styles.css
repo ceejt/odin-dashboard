@@ -442,3 +442,48 @@ body {
   font-size: 0.85rem;
   color: var(--text-gray);
 }
+
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: 240px 1fr;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-content {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .header {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+    padding: var(--spacing-md);
+  }
+
+  .action-buttons {
+    grid-column: 1 / -1;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-content {
+    grid-template-columns: 1fr;
+  }
+}
