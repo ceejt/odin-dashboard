@@ -49,4 +49,12 @@ function initProjectCards() {
         : "none";
     });
   });
+  const viewButtons = document.querySelectorAll(
+    ".project-actions .icon-btn:nth-child(2)",
+  );
+  viewButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      alert("Opening project...");
+    });
+  });
 }
