@@ -35,3 +35,18 @@ function initNotifications() {
     alert("You have 3 new notifications!");
   });
 }
+
+function initProjectCards() {
+  const favoriteButtons = document.querySelectorAll(
+    ".project-actions .icon-btn:first-child",
+  );
+  favoriteButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.currentTarget.classList.toggle("active");
+      const svg = e.currentTarget.querySelector("svg");
+      svg.style.fill = e.currentTarget.classList.contains("active")
+        ? "#7BDFF2"
+        : "none";
+    });
+  });
+}
