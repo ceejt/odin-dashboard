@@ -27,3 +27,11 @@ function filterProjects(query) {
     }
   });
 }
+
+function initNotifications() {
+  const notifBtn = document.querySelector(".notification-btn");
+
+  notifBtn.addEventListener("click", () => {
+    alert("You have 3 new notifications!");
+  });
+}
